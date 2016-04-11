@@ -48,6 +48,11 @@ public class ControlCenter : MonoBehaviour {
             //When the leader collides he obtains a follower.
             obtain = true;
 
+        else if (coll.name.StartsWith("TopBorder"))
+        {
+            //Application.LoadLevel(Application.LoadedLevel(0));
+        }
+
         Destroy(coll.gameObject);
     }
        
@@ -73,6 +78,14 @@ public class ControlCenter : MonoBehaviour {
             Follower.Insert(0, Follower.Last());
             Follower.RemoveAt(Follower.Count - 1);
         }
+    }
+
+   void OnTriggerEnter(Collider Coll)
+    {
+        //if(Coll.tag = "")
+        //{
+
+        //}
     }
       
 }
